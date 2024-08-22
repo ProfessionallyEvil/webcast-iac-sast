@@ -7,7 +7,7 @@ function main(){
   output_dir="${1:-./output}"
   mkdir -p "${output_dir}"
   tfsec terragoat/ |& tee "${output_dir}/tfsec_output.txt" || true
-  find kube-goat/manifests/ -iname "*.y*ml" | xargs -t -I{} kubeaudit all -f {} | tee "${output_dir}/kubeaudit_output.txt"
+  find kube-goat/manifests/ -iname "*.y*ml" | xargs -t -I{} kubeaudit all -f {} | tee "${output_dir}/kubeaudit_output.txt" || true
   if [[ -n "${CI:-}" ]] ; then
     cat "${output_dir}/*"
   fi
