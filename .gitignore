@@ -1,3 +1,4 @@
+output/
 # Local .terraform directories
 **/.terraform/*
 
