@@ -1,4 +1,5 @@
 # clone down repository with sub-modules and then build the Dockerfile to run all the tools against the code
+# add a caching layer for pulling down the docker containers
 
 name: Example CI SAST
 on: [push, workflow_dispatch]
@@ -13,4 +14,4 @@ jobs:
       - name: Build Dockerfile
         run: docker build -t example-ci-sast:latest --rm .
       - name: Run Dockerfile
-        run: docker run --rm -it -v "${PWD}":/app -w /app example-ci-sast:lastest
+        run: docker run --rm -v "${PWD}":/app -w /app example-ci-sast:lastest
