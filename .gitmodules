@@ -1,0 +1,6 @@
+[submodule "terragoat"]
+	path = terragoat
+	url = https://github.com/bridgecrewio/terragoat.git
+[submodule "kube-goat"]
+	path = kube-goat
+	url = https://github.com/ksoclabs/kube-goat.git
