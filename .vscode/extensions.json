@@ -1,7 +1,0 @@
-{
-    "recommendations": [
-        "tfsec.tfsec",
-        "hashicorp.terraform",
-        "Bridgecrew.checkov",
-    ]
-}
